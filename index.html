@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <!-- Star Wars Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <!-- Scroll animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./styles/main.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>My Resume</title>
+  </head>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <body>
+    <header>
+      <div class="animated-title">
+        <h1>Hello There !</h1>
+      </div>
+      <nav data-aos="flip-up">
+        <ul>
+          <li><a href="#">About Me</a></li>
+          <li><a href="#">Skills</a></li>
+          <li><a href="#">Socials</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <h2>About Me</h2>
+        <div class="unfolding-section" >
+          <p>Hello, I am Antoine Azar, a Lebanese student currently studying software engineering in Montpellier.
+            I like to ski, read, play video games and code. </p>
+          <img src="./images/profile_pic.png" alt="Me">
+        </div>
+      </section>
+
+      <section>
+        <h2>Education</h2>
+        <div class="card-container">
+
+          <div class="card">
+            <div class="card__face card__face--front">
+              <img src="./images/sscc-logo.png" alt="sscc-logo">
+            </div>
+            <div class="card__face card__face--back">
+              <h5>Collège des Saints-Cœurs Kfarhbab</h5>
+              <span class="graduation-date"><b>2005->2019</b></span><br>
+              <span>High School diploma in Sciences of Sociology and Economics</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card__face card__face--front">
+              <img src="./images/lau-logo.jpeg" alt="lau-logo">
+            </div>
+            <div class="card__face card__face--back">
+              <h5>Lebanese American University</h5>
+              <span class="graduation-date">2019-2020</span><br>
+              <span>Bachelor in Economics</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card__face card__face--front">
+              <img src="./images/psb-logo.jpeg" alt="psb-logo">
+            </div>
+            <div class="card__face card__face--back">
+              <h5>Paris School of Business</h5>
+              <span class="graduation-date">2020-2022</span><br>
+              <span>Bachelor in Business Administration</span>
+            </div>
+          </div>
+
+
+          <div class="card">
+            <div class="card__face card__face--front">
+              <img src="./images/epitech-logo.png" alt="epitech-logo">
+            </div>
+            <div class="card__face card__face--back">
+              <h5>Epitech</h5>
+              <span class="graduation-date">2022-2025</span><br>
+              <span>Msc in Software Engineering</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script type="text/javascript" src="./js/main.js">
+
+    </script>
+  </body>
+</html>

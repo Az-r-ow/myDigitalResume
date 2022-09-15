@@ -1,0 +1,184 @@
+
+body {
+  font-family: 'Press Start 2P', cursive;
+  color: white;
+}
+
+/* Animated Title */
+.animated-title {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.animated-title h1 {
+  padding: 10px;
+  width: 80%;
+  font-size: 4.5vw;
+  overflow: hidden;
+  border-right: .15em solid orange;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .15em;
+  animation:
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 80% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
+/* Anchor Links */
+a:link, a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Navbar */
+
+nav {
+  background-color: black;
+  position: sticky;
+  padding: 10px;
+}
+
+nav ul{
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+nav li:hover {
+  color: #FFBF00;
+}
+
+/* Unfloding Section */
+.unfolding-section {
+  height: auto;
+  padding: 10px;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: row;
+  align-items: center;
+}
+
+/* Education Cards */
+.card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card {
+  height: 300px;
+  width: 300px;
+  margin: 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transform-origin: center right;
+  transition: transform 1s;
+}
+
+.card img {
+  height: 100%;
+  width: 100%;
+  border-radius: 25px;
+  background-color: white;
+}
+
+.card.is-flipped {
+  transform: translateX(-100%) rotateY(-180deg);
+}
+
+.card__face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1vw;
+  backface-visibility: hidden;
+}
+
+.card__face--back {
+  transform: rotateY(180deg);
+  background-color: black;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.graduation-date {
+  color: orange;
+}
+
+
+
+/* Layout for mobile */
+@media screen and (max-width: 450px) {
+  body {
+    background-image: url('../images/mobile-background.jpeg');
+  }
+
+  h2 {
+    font-size: 3vh;
+  }
+
+  nav ul {
+    font-size: 1.5vh;
+    justify-content: space-between;
+  }
+
+  .unfolding-section {
+    font-size: 1.5vh;
+  }
+
+  .unfolding-section img {
+    height: 10vh;
+    width: 10vh;
+    margin-left: 1vw;
+  }
+}
+
+/* Layout for the bigger screens */
+@media screen and (min-width: 451px) {
+  body {
+    background-image: url('../images/desktop-background.jpeg');
+  }
+
+  h2 {
+    font-size: 3vw;
+  }
+
+  nav ul {
+    font-size: 2vw;
+    justify-content: space-around;
+  }
+
+  .unfolding-section {
+    font-size: 1.5vw;
+  }
+
+  .unfolding-section img {
+    height: 10vw;
+    width: 10vw;
+    margin-left: 1vw;
+  }
+}
