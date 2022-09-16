@@ -1,3 +1,6 @@
+html {
+  background-color: black;
+}
 
 body {
   font-family: 'Press Start 2P', cursive;
@@ -72,8 +75,13 @@ nav li:hover {
   background-color: white;
   color: black;
   display: flex;
-  justify-content: row;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
+}
+
+.unfolding-section p {
+  width: 75%;
 }
 
 /* Education Cards */
@@ -169,17 +177,21 @@ th {
 @media screen and (max-width: 450px) {
   body {
     background-image: url('../images/mobile-background.jpeg');
-    margin-left: 2vh;
-    margin-right: 2vh;
+    padding-left: 2vh;
+    padding-right: 2vh;
   }
 
   h2 {
-    font-size: 2vh;
+    font-size: 4vh;
   }
 
   nav ul {
     font-size: 1.5vh;
     justify-content: space-between;
+  }
+
+  section {
+    margin-top: 2vh;
   }
 
   table {
@@ -207,8 +219,8 @@ th {
   }
 
   .socials-section img {
-    height: 5vh;
-    width: 5vh;
+    height: 10vh;
+    width: 10vh;
   }
 }
 
@@ -216,8 +228,8 @@ th {
 @media screen and (min-width: 451px) {
   body {
     background-image: url('../images/desktop-background.jpeg');
-    margin-right: 2vw;
-    margin-left: 2vw;
+    padding-right: 2vw;
+    padding-left: 2vw;
   }
 
   h2 {
@@ -227,6 +239,10 @@ th {
   nav ul {
     font-size: 3vw;
     justify-content: space-around;
+  }
+
+  section {
+    padding-top: 2vw;
   }
 
   .unfolding-section {
