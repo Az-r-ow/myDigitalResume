@@ -11,10 +11,14 @@ window.onbeforeunload = function () {
   window.scrollTo(0, 0);
 };
 
-// Using this function to wait for the promise 
+// Using this function to wait for the promise
 const sleep = (ms) => {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
+
+// Getting the table rows
+let rows = document.querySelectorAll('tr');
+
 
 // Using the observer api to check when the element is on the screen
 const observer = new IntersectionObserver(async entries => {
@@ -27,7 +31,9 @@ const observer = new IntersectionObserver(async entries => {
           td.style.opacity = 1;
         }
       }
-    }
+      return
+    };
+    removeWhiteBars();
   })
 });
 
@@ -37,10 +43,13 @@ observer.observe(table);
 
 
 // Getting rid of the bars
-let rows = document.querySelectorAll('tr');
-for (let i = 0; i < rows.length; i++) {
-  for (const td of rows[i].children){
-    if (!td.classList.length)continue;
-    td.style.opacity = 0;
+const removeWhiteBars = () => {
+  for (let i = 0; i < rows.length; i++) {
+    for (const td of rows[i].children){
+      if (!td.classList.length)continue;
+      td.style.opacity = 0;
+    }
   }
-}
+};
+
+removeWhiteBars();
