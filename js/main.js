@@ -19,7 +19,6 @@ const sleep = (ms) => {
 // Getting the table rows
 let rows = document.querySelectorAll('tr');
 
-
 // Using the observer api to check when the element is on the screen
 const observer = new IntersectionObserver(async entries => {
   entries.forEach(async entry => {
