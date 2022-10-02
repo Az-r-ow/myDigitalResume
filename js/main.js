@@ -27,7 +27,6 @@ removeBuggyAnimation();
 
 // On window resize remove the animation as well
 $(window).resize(function() {
-  console.log("Im resized")
   removeBuggyAnimation();
 })
 
