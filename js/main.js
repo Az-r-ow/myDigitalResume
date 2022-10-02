@@ -6,6 +6,30 @@ for (let i = 0; i < cards.length; i++) {
   });
 }
 
+// Removing buggy animation on small screens
+let pageWidth = $(window).width();
+
+function removeBuggyAnimation() {
+  let pageWidth = $(window).width();
+  if (pageWidth <= 450) {
+    $('.card__face--front').removeAttr("data-aos");
+    $('.card__face--front').removeAttr("data-aos-duration");
+  } else {
+    // if the attribute is not there add it
+    if (!$('.card__face--front').attr("data-aos")) {
+      $('.card__face--front').attr("data-aos", "fade-down");
+      $('.card__face--front').attr("data-aos-duration", "1000");
+    }
+  }
+}
+
+removeBuggyAnimation();
+
+// On window resize remove the animation as well
+$(window).resize(function() {
+  removeBuggyAnimation();
+})
+
 // Starting the page from the top on reload
 window.onbeforeunload = function () {
   window.scrollTo(0, 0);
