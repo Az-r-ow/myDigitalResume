@@ -242,8 +242,11 @@ th {
     border-spacing: 0 5vh;
   }
 
-  .unfolding-section {
+  p {
     font-size: 1.5vh;
+  }
+
+  .unfolding-section {
     display: flex;
     flex-direction: column-reverse;
     justify-content: center;
@@ -294,7 +297,7 @@ th {
     padding-top: 2vw;
   }
 
-  .unfolding-section {
+  p {
     font-size: 1.5vw;
   }
 
