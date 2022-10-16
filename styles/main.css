@@ -71,12 +71,17 @@ nav li:hover {
   padding: 10px;
   padding-left: 2vw;
   padding-right: 2vw;
+  line-height: 200%;
   background-color: white;
   color: black;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+
+.unfolding-section u {
+  color: orange;
 }
 
 .unfolding-section p {
@@ -157,6 +162,42 @@ th {
   width: 3%;
 }
 
+/* Projects Section */
+.project-div {
+  cursor: pointer;
+  padding: 1rem;
+  border: dashed 5px orange;
+  border-radius: 1rem;
+  margin-bottom: 1.5rem;
+}
+.information {
+  background-color: white;
+  padding: 2rem;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.5),
+              inset 5px 5px 8px rgba(0,0,0,0.5);  color: black;
+}
+
+.information p {
+  line-height: 200%;
+}
+
+.play-btn-div {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.play-btn-div span {
+  border-radius: 35%;
+  background-color: transparent;
+  box-shadow: 5px 5px 10px black;
+}
+
+.play-btn-div span:hover {
+  box-shadow: none;
+}
+
+
 /* Socials Section */
 .socials-section {
   display: flex;
@@ -203,6 +244,9 @@ th {
 
   .unfolding-section {
     font-size: 1.5vh;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
   }
 
   .unfolding-section img {
@@ -217,6 +261,10 @@ th {
 
   .h2-inner-text {
     font-size: 1.5vh;
+  }
+
+  .socials-div {
+    justify-content: space-between;
   }
 
   .socials-section img {

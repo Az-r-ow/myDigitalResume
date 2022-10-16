@@ -16,6 +16,9 @@
     <!-- Font Awesome Logos -->
     <script src="https://kit.fontawesome.com/20598cc72c.js" crossorigin="anonymous"></script>
 
+    <!-- EJS -->
+    <script src="https://unpkg.com/ejs@3.1.6/ejs.min.js"></script>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <title>My Resume</title>
@@ -28,8 +31,8 @@
       </div>
       <nav data-aos="flip-up" data-aos-duration="2000">
         <ul>
-          <li><a href="#about-me-section">About Me</a></li>
           <li><a href="#skills-section">Skills</a></li>
+          <li><a href="#projects-section">Projects</a></li>
           <li><a href="#socials-section">Socials</a></li>
         </ul>
       </nav>
@@ -40,8 +43,7 @@
       <section>
         <h2>About Me</h2>
         <div class="unfolding-section" id="about-me-section">
-          <p data-aos="fade-right" data-aos-duration="3000">Hello, I am Antoine Azar, a Lebanese student currently studying software engineering in Epitech Montpellier.
-            I like to ski, read, play video games and code. </p>
+          <p data-aos="fade-right" data-aos-duration="3000">Hello and welcome to my digital resume, I am Antoine Azar a Third year software engingeering student at Epitech Montpellier. I like to ski, program, play basketball and eat. Enough about what I like, more about what I can do ;) .<br> Scroll for more... And don't hesitate to contact me on my <a href="#socials-section"><u>socials</u></a>.</p>
           <img src="./images/profile_pic.png" alt="Me" data-aos="fade-left" data-aos-duration="3000">
         </div>
       </section>
@@ -162,7 +164,11 @@
             <td class="white-square"></td>
           </tr>
         </table>
+      </section>
 
+      <!-- Projects Section -->
+      <section class="projects-section">
+        <h2>Projects</h2>
       </section>
 
       <!-- Socials Section -->
@@ -179,8 +185,6 @@
     <script>
       AOS.init();
     </script>
-    <script type="text/javascript" src="./js/main.js">
-
-    </script>
+    <script type="text/javascript" src="./js/main.js"></script>
   </body>
 </html>
