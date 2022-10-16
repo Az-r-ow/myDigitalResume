@@ -51,7 +51,6 @@ a:link, a:visited {
 
 nav {
   background-color: black;
-  position: sticky;
   padding: 10px;
 }
 
@@ -188,7 +187,7 @@ th {
   }
 
   nav ul {
-    font-size: 2vh;
+    font-size: 1.7vh;
     justify-content: space-between;
   }
 
