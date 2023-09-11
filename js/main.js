@@ -1,54 +1,67 @@
 // Dinamically rendering the projects
 
 // Getting the paths of the logos
-const c = './images/c_logo.png';
-const css = './images/css_logo.png';
-const discord = './images/discord_logo.png';
-const html = './images/html_logo.png';
-const js = './images/js_logo.png';
-const mongodb = './images/mongodb_logo.png';
-const nodejs = './images/nodejs_logo.png';
-const python = './images/python_logo.png';
+const cpp = "./images/cpp_logo.png";
+const c = "./images/c_logo.png";
+const css = "./images/css_logo.png";
+const discord = "./images/discord_logo.png";
+const html = "./images/html_logo.png";
+const js = "./images/js_logo.png";
+const mongodb = "./images/mongodb_logo.png";
+const nodejs = "./images/nodejs_logo.png";
+const python = "./images/python_logo.png";
 
 const projects = [
   {
-    name: 'NFT Project Ranker',
-    repoUrl: 'https://github.com/Az-r-ow/rarity-bot',
+    name: "NeuralNet",
+    repoUrl: "https://github.com/Az-r-ow/NeuralNet",
+    technos: [cpp, python],
+    description:
+      "My attempt on creating a general purpose Neural Network that can be parametrized to your liking.",
+  },
+  {
+    name: "NFT Project Ranker",
+    repoUrl: "https://github.com/Az-r-ow/rarity-bot",
     technos: [discord, js, mongodb, nodejs],
-    description: 'I implemented an algorithm that calculates the rarity score of an NFT in a certain Collection based on the probability of recurrence of its trait. Then the program ranks the NFTs in the collection and stores them in the Database. The user could check the rarity and rank through the discord bot made just for the project.'
+    description:
+      "I implemented an algorithm that calculates the rarity score of an NFT in a certain Collection based on the probability of recurrence of its trait. Then the program ranks the NFTs in the collection and stores them in the Database. The user could check the rarity and rank through the discord bot made just for the project.",
   },
   {
-    name: 'Password Vault',
-    repoUrl: 'https://github.com/Az-r-ow/newpwdserver#readme',
+    name: "Password Vault",
+    repoUrl: "https://github.com/Az-r-ow/newpwdserver#readme",
     technos: [mongodb, nodejs, js],
-    description: 'This project was the final project for the CS50 course. I used express for the backend and EJS for the front and a library for encryption called bcrypt. Nothing fancy I know ! It\'s sole purpose was to familiarise with the concepts learned throughout the course such as data structures, resource management and security.'
+    description:
+      "This project was the final project for the CS50 course. I used express for the backend and EJS for the front and a library for encryption called bcrypt. Nothing fancy I know ! It's sole purpose was to familiarise with the concepts learned throughout the course such as data structures, resource management and security.",
   },
   {
-    name: 'Connect (Puissance) 4 Terminal',
+    name: "Connect (Puissance) 4 Terminal",
     technos: [c],
-    repoUrl: 'https://github.com/Az-r-ow/connect4#readme',
-    description: "After learning C in the CS50 course, I made this terminal implementation of the connect 4 game to get a better understanding of pointers and C in general. Soon, I will improve its interface with the ncurses library. And afterwards, I might make an option to play against an AI. Who knows ???"
+    repoUrl: "https://github.com/Az-r-ow/connect4#readme",
+    description:
+      "After learning C in the CS50 course, I made this terminal implementation of the connect 4 game to get a better understanding of pointers and C in general. Soon, I will improve its interface with the ncurses library. And afterwards, I might make an option to play against an AI. Who knows ???",
   },
   {
-    name: 'Digital Resume',
+    name: "Digital Resume",
     technos: [html, css, js],
-    repoUrl: 'https://github.com/Az-r-ow/myDigitalResume#readme',
-    description: "The digital resume is the website you're currently on right now. I could've made it with some frawework, but to go with the old school theme I decided to go with jquery, html and css (and ejs but shhhhh)."
+    repoUrl: "https://github.com/Az-r-ow/myDigitalResume#readme",
+    description:
+      "The digital resume is the website you're currently on right now. I could've made it with some frawework, but to go with the old school theme I decided to go with jquery, html and css (and ejs but shhhhh).",
   },
   {
-    name: 'Discord Casino Bot',
+    name: "Discord Casino Bot",
     technos: [js, nodejs, discord],
-    repoUrl: 'https://github.com/Az-r-ow/casino-bot',
-    description: "I created this bot for an NFT project of casino partouche. It has its own currency system, where user can claim daily amounts of money and gamble them on games like BlackJack, High Low, Roulette and much more."
+    repoUrl: "https://github.com/Az-r-ow/casino-bot",
+    description:
+      "I created this bot for an NFT project of casino partouche. It has its own currency system, where user can claim daily amounts of money and gamble them on games like BlackJack, High Low, Roulette and much more.",
   },
   {
-    name: 'AI Tic-Tac-Toe',
+    name: "AI Tic-Tac-Toe",
     technos: [python],
-    repoUrl: 'https://github.com/Az-r-ow/cs50-ai#readme',
-    description: "This was an assignment from the CS50 AI course, I have my progress in the course so far on my github account with my commentary on each project in the README of the repo."
-  }
+    repoUrl: "https://github.com/Az-r-ow/cs50-ai#readme",
+    description:
+      "This was an assignment from the CS50 AI course, I have my progress in the course so far on my github account with my commentary on each project in the README of the repo.",
+  },
 ];
-
 
 const projectsEjs = `
   <% projects.forEach((project, index) => { %>
@@ -65,29 +78,26 @@ const projectsEjs = `
       </div>
     </div>
   <% }) %>
-`
+`;
 // Render the project's section
-const projectsHtml = ejs.render(projectsEjs, {projects: projects});
-$('.projects-section').append(projectsHtml);
+const projectsHtml = ejs.render(projectsEjs, { projects: projects });
+$(".projects-section").append(projectsHtml);
 
 // Hide the informatiom
-$('.information').css('display', 'none');
+$(".information").css("display", "none");
 
 // On Click display them
-$('.project-div').click(function() {
-  const id = $(this).attr('id');
+$(".project-div").click(function () {
+  const id = $(this).attr("id");
 
-  $(`#${id}.information`).slideToggle('slow');
-})
-
-
-
+  $(`#${id}.information`).slideToggle("slow");
+});
 
 // Flippiing the cards
-let cards = document.getElementsByClassName('card');
+let cards = document.getElementsByClassName("card");
 for (let i = 0; i < cards.length; i++) {
-  cards[i].addEventListener( 'click', function() {
-    cards[i].classList.toggle('is-flipped');
+  cards[i].addEventListener("click", function () {
+    cards[i].classList.toggle("is-flipped");
   });
 }
 
@@ -97,13 +107,13 @@ let pageWidth = $(window).width();
 function removeBuggyAnimation() {
   let pageWidth = $(window).width();
   if (pageWidth <= 450) {
-    $('.card__face--front').removeAttr("data-aos");
-    $('.card__face--front').removeAttr("data-aos-duration");
+    $(".card__face--front").removeAttr("data-aos");
+    $(".card__face--front").removeAttr("data-aos-duration");
   } else {
     // if the attribute is not there add it
-    if (!$('.card__face--front').attr("data-aos")) {
-      $('.card__face--front').attr("data-aos", "fade-down");
-      $('.card__face--front').attr("data-aos-duration", "1000");
+    if (!$(".card__face--front").attr("data-aos")) {
+      $(".card__face--front").attr("data-aos", "fade-down");
+      $(".card__face--front").attr("data-aos-duration", "1000");
     }
   }
 }
@@ -111,9 +121,9 @@ function removeBuggyAnimation() {
 removeBuggyAnimation();
 
 // On window resize remove the animation as well
-$(window).resize(function() {
+$(window).resize(function () {
   removeBuggyAnimation();
-})
+});
 
 // Starting the page from the top on reload
 window.onbeforeunload = function () {
@@ -122,39 +132,38 @@ window.onbeforeunload = function () {
 
 // Using this function to wait for the promise
 const sleep = (ms) => {
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
+  return new Promise((resolve) => setTimeout(resolve, ms));
+};
 
 // Getting the table rows
-let rows = document.querySelectorAll('tr');
+let rows = document.querySelectorAll("tr");
 
 // Using the observer api to check when the element is on the screen
-const observer = new IntersectionObserver(async entries => {
-  entries.forEach(async entry => {
-    if (entry.isIntersecting){
+const observer = new IntersectionObserver(async (entries) => {
+  entries.forEach(async (entry) => {
+    if (entry.isIntersecting) {
       for (const row of rows) {
         for (const td of row.children) {
           await sleep(100);
-          if(!td.classList.length) continue;
+          if (!td.classList.length) continue;
           td.style.opacity = 1;
         }
       }
-      return
-    };
+      return;
+    }
     removeWhiteBars();
-  })
+  });
 });
 
 // When the table is visible load the rows
-let table = document.querySelector('table');
+let table = document.querySelector("table");
 observer.observe(table);
-
 
 // Getting rid of the bars
 const removeWhiteBars = () => {
   for (let i = 0; i < rows.length; i++) {
-    for (const td of rows[i].children){
-      if (!td.classList.length)continue;
+    for (const td of rows[i].children) {
+      if (!td.classList.length) continue;
       td.style.opacity = 0;
     }
   }
