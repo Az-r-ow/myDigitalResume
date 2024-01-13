@@ -2,26 +2,32 @@
 <html lang="en" dir="ltr">
   <head>
     <!-- Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Scroll animation -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/main.css" />
 
     <!-- Font Awesome Logos -->
-    <script src="https://kit.fontawesome.com/20598cc72c.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/20598cc72c.js"
+      crossorigin="anonymous"
+    ></script>
 
     <!-- EJS -->
     <script src="https://unpkg.com/ejs@3.1.6/ejs.min.js"></script>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-    <title>My Resume</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <title>Az-r-ow's Digital Resume</title>
   </head>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <body>
@@ -38,65 +44,25 @@
       </nav>
     </header>
     <main>
-
       <!-- About Me Section -->
       <section>
         <h2>About Me</h2>
         <div class="unfolding-section" id="about-me-section">
-          <p data-aos="fade-right" data-aos-duration="3000">Hello and welcome to my digital resume, I am Antoine Azar a Third year software engingeering student at Epitech Montpellier. I like to ski, program, play basketball and eat. Enough about what I like, more about what I can do ;) .<br> Scroll for more... And don't hesitate to contact me on my <a href="#socials-section"><u>socials</u></a>.</p>
-          <img src="./images/profile_pic.png" alt="Me" data-aos="fade-left" data-aos-duration="3000">
-        </div>
-      </section>
-
-      <!-- Education Section -->
-      <section>
-        <h2>Education <span class="h2-inner-text">(click on the icons)</span></h2>
-        <div class="card-container">
-
-          <div class="card">
-            <div class="card__face card__face--front" data-aos="fade-down" data-aos-duration="1000">
-              <img src="./images/sscc-logo.png" alt="sscc-logo">
-            </div>
-            <div class="card__face card__face--back">
-              <h5>Collège des Saints-Cœurs Kfarhbab</h5>
-              <span class="graduation-date"><b>2005->2019</b></span><br>
-              <span>High School diploma in Sciences of Sociology and Economics</span>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card__face card__face--front" data-aos="fade-down" data-aos-duration="1000">
-              <img src="./images/lau-logo.jpeg" alt="lau-logo">
-            </div>
-            <div class="card__face card__face--back">
-              <h5>Lebanese American University</h5>
-              <span class="graduation-date">2019->2020</span><br>
-              <span>Bachelor in Economics</span>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card__face card__face--front" data-aos="fade-down" data-aos-duration="1000">
-              <img src="./images/psb-logo.jpeg" alt="psb-logo">
-            </div>
-            <div class="card__face card__face--back">
-              <h5>Paris School of Business</h5>
-              <span class="graduation-date">2020->2022</span><br>
-              <span>Bachelor in Business Administration</span>
-            </div>
-          </div>
-
-
-          <div class="card">
-            <div class="card__face card__face--front" data-aos="fade-down" data-aos-duration="1000">
-              <img src="./images/epitech-logo.png" alt="epitech-logo">
-            </div>
-            <div class="card__face card__face--back">
-              <h5>Epitech</h5>
-              <span class="graduation-date">2022->2025</span><br>
-              <span>Msc in Software Engineering</span>
-            </div>
-          </div>
+          <p data-aos="fade-right" data-aos-duration="3000">
+            Hello and welcome to my digital resume, I am Antoine Azar a software
+            engineering student at Epitech Montpellier. I like to ski, program,
+            play basketball and eat. Enough about what I like, more about what I
+            can do ;) .<br />
+            Scroll for more... And don't hesitate to contact me on my
+            <a href="#socials-section"><u>socials</u></a
+            >.
+          </p>
+          <img
+            src="./images/profile_pic.png"
+            alt="Me"
+            data-aos="fade-left"
+            data-aos-duration="3000"
+          />
         </div>
       </section>
 
@@ -113,6 +79,26 @@
             <th></th>
           </tr>
           <tr>
+            <td>C Language</td>
+            <td class="white-square"></td>
+            <td class="white-square"></td>
+            <td class="white-square"></td>
+          </tr>
+          <tr>
+            <td>C++</td>
+            <td class="white-square"></td>
+            <td class="white-square"></td>
+            <td class="white-square"></td>
+            <td class="white-square"></td>
+          </tr>
+          <tr>
+            <td>Python</td>
+            <td class="white-square"></td>
+            <td class="white-square"></td>
+            <td class="white-square"></td>
+            <td class="white-square"></td>
+          </tr>
+          <tr>
             <td>NodeJS</td>
             <div class="increasing-jauge">
               <td class="white-square"></td>
@@ -123,13 +109,14 @@
             </div>
           </tr>
           <tr>
-            <td>Web Dev</td>
+            <td>AI (concepts)</td>
+            <td class="white-square"></td>
             <td class="white-square"></td>
             <td class="white-square"></td>
             <td class="white-square"></td>
           </tr>
           <tr>
-            <td>AI</td>
+            <td>Web Dev</td>
             <td class="white-square"></td>
             <td class="white-square"></td>
             <td class="white-square"></td>
@@ -150,19 +137,6 @@
             <td class="white-square"></td>
             <td class="white-square"></td>
           </tr>
-          <tr>
-            <td>C Language</td>
-            <td class="white-square"></td>
-            <td class="white-square"></td>
-            <td class="white-square"></td>
-          </tr>
-          <tr>
-            <td>Python</td>
-            <td class="white-square"></td>
-            <td class="white-square"></td>
-            <td class="white-square"></td>
-            <td class="white-square"></td>
-          </tr>
         </table>
       </section>
 
@@ -175,11 +149,20 @@
       <section class="socials-section">
         <h2>Socials</h2>
         <div class="socials-div" id="socials-section">
-          <a href="https://linkedin.com/in/antoine-azar-01"><img src="./images/linkedin-logo.png" alt="linkedIn-logo" data-aos="fade-right"></a>
-          <a href="https://github.com/Az-R-ow"><img src="./images/github-logo.png" alt="github-logo" data-aos="fade-left"></a>
+          <a href="https://linkedin.com/in/antoine-azar-01"
+            ><img
+              src="./images/linkedin-logo.svg"
+              alt="linkedIn-logo"
+              data-aos="fade-right"
+          /></a>
+          <a href="https://github.com/Az-R-ow"
+            ><img
+              src="./images/github-logo.svg"
+              alt="github-logo"
+              data-aos="fade-left"
+          /></a>
         </div>
       </section>
-
     </main>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>

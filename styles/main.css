@@ -5,7 +5,8 @@
 }
 
 html {
-  background-color: var(--background-color);
+  background-image: var(--background-color);
+  overflow-x: hidden;
 }
 
 body,
@@ -14,7 +15,6 @@ html {
   width: 100%;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
 }
 
 body {
@@ -23,14 +23,49 @@ body {
   font-family: var(--font-family);
 }
 
-h2 {
-  font-size: 3rem;
-  margin: 4rem 0;
+/* Navbar */
+nav {
+  background-color: black;
+  padding: 1rem;
 }
 
 nav ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding: 0;
   font-size: 1.6rem;
   justify-content: space-between;
+}
+
+nav li:hover {
+  color: var(--brand-orange);
+}
+
+/* Anchor Links */
+a:link,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Main Section */
+section {
+  margin: 4rem 0;
+  padding: 1rem;
+}
+
+table {
+  height: 20vh;
+}
+
+th {
+  text-align: center;
+  width: 3%;
+}
+
+p {
+  font-size: 1rem;
 }
 
 /* Animated Title */
@@ -76,42 +111,11 @@ nav ul {
   }
 }
 
-/* Anchor Links */
-a:link,
-a:visited {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* Navbar */
-
-nav {
-  background-color: black;
-  padding: 1rem;
-}
-
-nav ul {
-  display: flex;
-  flex-direction: row;
-  list-style: none;
-  padding: 0;
-}
-
-nav li:hover {
-  color: var(--brand-orange);
-}
-
-/* Main Section */
-main {
-  display: grid;
-  margin: 0 1.5rem;
-}
-
 /* Unfolding Section */
 .unfolding-section {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column-reverse;
+  justify-content: center;
   align-items: center;
   padding: 1rem;
   line-height: 200%;
@@ -120,60 +124,12 @@ main {
   color: black;
 }
 
+.unfolding-section img {
+  height: 5rem;
+  width: 5rem;
+}
+
 .unfolding-section u {
-  color: var(--brand-orange);
-}
-
-/* Education Cards */
-.card-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
-.card {
-  height: 300px;
-  width: 300px;
-  margin: 10px;
-  border-radius: 25px;
-  cursor: pointer;
-  transform-style: preserve-3d;
-  transform-origin: center right;
-  transition: transform 1s;
-}
-
-.card img {
-  height: 100%;
-  width: 100%;
-  border-radius: 25px;
-  background-color: var(--brand-white);
-}
-
-.card.is-flipped {
-  transform: translateX(-100%) rotateY(-180deg);
-}
-
-.card__face {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  color: var(--brand-white);
-  text-align: center;
-  font-weight: bold;
-  backface-visibility: hidden;
-}
-
-.card__face--back {
-  transform: rotateY(180deg);
-  background-color: black;
-  border-radius: 25px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.graduation-date {
   color: var(--brand-orange);
 }
 
@@ -190,11 +146,6 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-th {
-  text-align: center;
-  width: 3%;
 }
 
 /* Projects Section */
@@ -242,50 +193,15 @@ th {
 }
 
 .socials-div {
-  width: 50%;
+  height: 20vh;
   display: flex;
   justify-content: space-around;
-  padding-bottom: 20%;
 }
 
-/* Layout for mobile */
-table {
-  font-size: 1.5rem;
-  border-collapse: separate;
-  border-spacing: 0 5rem;
-}
-
-p {
-  font-size: 1.5rem;
-}
-
-.unfolding-section {
-  display: flex;
-  flex-direction: column-reverse;
-  justify-content: center;
-}
-
-.unfolding-section img {
-  height: 10rem;
-  width: 10rem;
-  margin-left: 1rem;
-}
-
-.card--face__back span {
-  font-size: 5rem;
-}
-
-.h2-inner-text {
-  font-size: 1.5rem;
-}
-
-.socials-div {
-  justify-content: space-between;
-}
-
-.socials-section img {
-  height: 10rem;
-  width: 10rem;
+.socials-div img {
+  margin: 1.5rem;
+  height: 6rem;
+  width: 6rem;
 }
 
 /* Layout for the medium screens */
@@ -311,9 +227,25 @@ p {
     font-size: 2rem;
   }
 
+  h3 {
+    font-size: 1.8rem;
+  }
+
   nav ul {
     font-size: 2rem;
     justify-content: space-around;
+  }
+
+  table {
+    border-spacing: 0 2rem;
+  }
+
+  td {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.5rem;
   }
 
   .unfolding-section img {
@@ -321,8 +253,9 @@ p {
     width: 5rem;
   }
 
-  p {
-    font-size: 2rem;
+  .socials-div img {
+    height: 10rem;
+    width: 10rem;
   }
 }
 
@@ -333,6 +266,10 @@ p {
     grid-template-columns: 1fr 10fr 1fr;
   }
 
+  nav a {
+    font-size: 4rem;
+  }
+
   h1 {
     font-size: 5rem;
   }
@@ -341,8 +278,31 @@ p {
     font-size: 4rem;
   }
 
+  p {
+    font-size: 2rem;
+  }
+
   nav ul {
     font-size: 2rem;
     justify-content: space-around;
+  }
+
+  table {
+    border-spacing: 0 3rem;
+  }
+
+  .unfolding-section img {
+    height: 10rem;
+    width: 10rem;
+  }
+
+  .animated-title h1 {
+    max-width: 750px;
+  }
+
+  .socials-div img {
+    margin: 5rem;
+    height: 20rem;
+    width: 20rem;
   }
 }

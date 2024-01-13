@@ -20,6 +20,13 @@ const projects = [
       "My attempt on creating a general purpose Neural Network that can be parametrized to your liking.",
   },
   {
+    name: "Connect (Puissance) 4 Terminal",
+    technos: [c],
+    repoUrl: "https://github.com/Az-r-ow/connect4#readme",
+    description:
+      "Terminal implementation of the connect 4 game that could be enjoyed with an adversary or against the computer. The experience is powered with ncurses.",
+  },
+  {
     name: "NFT Project Ranker",
     repoUrl: "https://github.com/Az-r-ow/rarity-bot",
     technos: [discord, js, mongodb, nodejs],
@@ -32,13 +39,6 @@ const projects = [
     technos: [mongodb, nodejs, js],
     description:
       "This project was the final project for the CS50 course. I used express for the backend and EJS for the front and a library for encryption called bcrypt. Nothing fancy I know ! It's sole purpose was to familiarise with the concepts learned throughout the course such as data structures, resource management and security.",
-  },
-  {
-    name: "Connect (Puissance) 4 Terminal",
-    technos: [c],
-    repoUrl: "https://github.com/Az-r-ow/connect4#readme",
-    description:
-      "After learning C in the CS50 course, I made this terminal implementation of the connect 4 game to get a better understanding of pointers and C in general. Soon, I will improve its interface with the ncurses library. And afterwards, I might make an option to play against an AI. Who knows ???",
   },
   {
     name: "Digital Resume",
@@ -91,38 +91,6 @@ $(".project-div").click(function () {
   const id = $(this).attr("id");
 
   $(`#${id}.information`).slideToggle("slow");
-});
-
-// Flippiing the cards
-let cards = document.getElementsByClassName("card");
-for (let i = 0; i < cards.length; i++) {
-  cards[i].addEventListener("click", function () {
-    cards[i].classList.toggle("is-flipped");
-  });
-}
-
-// Removing buggy animation on small screens
-let pageWidth = $(window).width();
-
-function removeBuggyAnimation() {
-  let pageWidth = $(window).width();
-  if (pageWidth <= 450) {
-    $(".card__face--front").removeAttr("data-aos");
-    $(".card__face--front").removeAttr("data-aos-duration");
-  } else {
-    // if the attribute is not there add it
-    if (!$(".card__face--front").attr("data-aos")) {
-      $(".card__face--front").attr("data-aos", "fade-down");
-      $(".card__face--front").attr("data-aos-duration", "1000");
-    }
-  }
-}
-
-removeBuggyAnimation();
-
-// On window resize remove the animation as well
-$(window).resize(function () {
-  removeBuggyAnimation();
 });
 
 // Starting the page from the top on reload
